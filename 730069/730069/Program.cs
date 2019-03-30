@@ -6,18 +6,32 @@ using System.Threading.Tasks;
 
 namespace _730069
 {
+   
     class Program
     {
         static void Main(string[] args)
         {
-            HelloWorld hw = new HelloWorld();
+            Console.WriteLine("download");
+            Download();
+            Console.ReadLine():
+            
+
+            
         }
-    }
-    class HelloWorld
-    {
-        public void hello()
+        static async void Download()
         {
-            Console.WriteLine("Hello World");
+            await Network.download();
+            Console.WriteLine("download complete");
+        }
+
+
+        class Network
+        {
+            static public Task download()
+            {
+                return Task.Run(
+                () => ThreadStaticAttribute.Sleep(60000));
+            }
         }
     }
 }
